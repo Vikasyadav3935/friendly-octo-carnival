@@ -1,6 +1,6 @@
 #This is a assignment consist of three screen .
 
-
+## The Login button will redirect to login screen and register will redirect to email verification screen.
 ## Screenshot
 <p align="center" >
   <img src="https://user-images.githubusercontent.com/108892061/233917713-6de419a6-3ba9-4ad5-acfb-1e907370312a.png" width="350" >
