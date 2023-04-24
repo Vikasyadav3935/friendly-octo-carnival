@@ -1,11 +1,12 @@
 import { View, Text,StyleSheet,TextInput,TouchableOpacity, } from 'react-native'
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-import CheckBox from '@react-native-community/checkbox';
+
 
 
 const colors = ['#942483', '#272662','#272662'];
 const Login = () => {
+ 
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -45,12 +46,18 @@ const Login = () => {
             </Text>
           </TouchableOpacity>
        </View>
-       <View>
-        <View>
-        <CheckBox />
-        <Text>Remeber Me ?</Text>
+       <View style={{flexDirection:'row',justifyContent:'space-between',width:'85%',alignSelf:'center',marginTop:10}}>
+        <View style={{flexDirection:'row'}}>
+         <View style={{width:20,height:20,borderWidth:1.9,borderColor:'white'}}></View>
+        <Text style={{color:'white',marginLeft:10}}>Remember Me ?</Text>
         </View>
-        
+        <Text style={{color:'white'}}>
+          Forget Password
+        </Text>
+       </View>
+       <View style={{justifyContent:'center',alignItems:'center',flex:1,flexDirection:'row'}}>
+        <Text style={{color:'white'}}>Not a member yet?</Text>
+        <Text style={{color:'yellow',fontSize:16,fontWeight:'700'}}>Join now</Text>
        </View>
       </LinearGradient>
     </View>
@@ -67,7 +74,7 @@ const styles=StyleSheet.create({
         flex: 1,
       },
       view1:{
-        marginTop:'26%',
+        marginTop:'28%',
         width:'80%',
         alignSelf:'center',
       },

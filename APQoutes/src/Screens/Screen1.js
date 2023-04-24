@@ -5,7 +5,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const colors = ['#942483', '#272662', '#272662'];
 
-const Screen1 = () => {
+const Screen1 = ({navigation}) => {
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -20,7 +20,9 @@ const Screen1 = () => {
           </Text>
         </View>
         <View style={styles.sec}>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity style={styles.btn}
+           onPress={()=>navigation.navigate('Login')}
+          >
             <Text
               style={{
                 color: 'white',
@@ -31,7 +33,9 @@ const Screen1 = () => {
               LOGIN
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn1}>
+          <TouchableOpacity style={styles.btn1}
+          onPress={()=>navigation.navigate('Email')}
+          >
             <Text
               style={{
                 color: 'white',
@@ -47,7 +51,7 @@ const Screen1 = () => {
           <Text style={{alignSelf: 'center', color: 'white', marginBottom: 15}}>
             Login with
           </Text>
-          <View style={{justifyContent: 'space-around', flexDirection: 'row',marginBottom:18}}>
+          <View style={{justifyContent: 'space-around', flexDirection: 'row',marginBottom:23}}>
             <View style={styles.circle}>
               <FontAwesome name="facebook" color="white" size={22} />
             </View>
@@ -72,7 +76,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   view: {
-    marginTop: '15%',
+    marginTop: '25%',
     width: '90%',
     alignSelf: 'center',
     flex: 1,
